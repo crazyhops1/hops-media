@@ -1,0 +1,145 @@
+/* Contact container */
+.contact-container {
+   
+    padding: 10px;
+    background-color: #f1f1f1;
+ 
+ 
+   width: 90%;
+  }
+  
+  /* Search bar */
+  .contact-search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .searchbar {
+    width: 80%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  /* Contact list */
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+  }
+  
+  /* Contact user item */
+  .contact-user {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .chat-send{
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .contact-user:hover {
+    background-color: #eaeaea;
+  }
+  
+  /* Profile image container */
+  .contact-list-user-profile-img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .contact-list-user-profile-img > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Active user indicator */
+  .activeuser {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    border: 2px solid white; /* Adds a small white border around the indicator */
+  }
+  
+  /* Contact username */
+  .contact-list-user-profile-username {
+    flex-grow: 1;
+  }
+  
+  .username {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Message container */
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+
+  }
+  
+  /* Fixing the blue background of the message container */
+
+/* Chat container */
+.chat-history{
+    height: 65vh; /* Sets the height to 65% of the viewport height */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack messages vertically */
+    gap: 10px; /* Space between messages */
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling if messages overflow */
+  }
+  
+  /* Friend's chat */
+  .friend-chat {
+    color: black;
+    border-radius: 15px;
+    padding: 12px 20px;
+    max-width: 70%; /* Friend's message takes up 70% of the container's width */
+    align-self: flex-start; /* Align friend's message to the left */
+    word-wrap: break-word; /* Ensure long text breaks correctly */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for visual depth */
+  }
+  
+  /* My chat */
+  .my-chat {
+    background-color: #4a90e2; /* Blue background for your message */
+    border-radius: 15px;
+    padding: 12px 20px;
+    max-width: 70%; /* My message takes up 70% of the container's width */
+    align-self: flex-end; /* Align my message to the right */
+    word-wrap: break-word; /* Ensure long text breaks correctly */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for visual depth */
+  }
+  
+ 
+
+  .chat-back-arrow {
+    color: red;
+    visibility: 1;
+    display: flex;
+    align-items: center;
+}
+.message-container-click{
+    visibility: 1;
+}
+
