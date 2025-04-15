@@ -14,7 +14,9 @@ const corsOptions = {
     origin: process.env.FRONTEND,
     credentials: true,
 };
+
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // Middleware
 app.use(cookieParser());
