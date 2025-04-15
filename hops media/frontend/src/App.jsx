@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css'
 import Navbar from './comp/navbar/Navbar'
-import dotenv from 'dotenv/config';
 // Importing Components
 import Profile from './pages/profile/Profile';
 import Post from './comp/post/Post';
