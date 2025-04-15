@@ -19,7 +19,7 @@ import Chat from './pages/message/Chat';
 import { useSelector } from 'react-redux';
 import { useSocketConnection } from './redux/features/OnlineUser';
 
-   export const url ='https://hops-media.onrender.com'
+   export const url =process.env.BACKEND_URL
 const App = () => {
   const Users = useSelector((state) => state.socket.connectedUser);
 
