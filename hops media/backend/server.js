@@ -11,8 +11,8 @@ import { app, server } from './socket/socket.js';
 
 // CORS Setup
 const corsOptions = {
-    origin: process.env.FRONTEND,
-    credentials: true,
+  origin: process.env.FRONTEND,
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
@@ -24,26 +24,28 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
-app.get('/',(req,res)=>{
-    res.send('api runing')
-})
+app.get('/', (req, res) => {
+  res.send('API running 🚀');
+});
+
 app.use('/auth', authRouter);
 app.use('/user', userRouter);
 app.use('/post', postRouter);
 app.use('/message', messageRouter);
 
+// ✅ Connect DB first, then start server
+const startServer = async () => {
+  try {
+    await dbConnection();
+    console.log('✅ Database connected successfully');
 
-// Start Server
-server.listen(process.env.PORT, async (e) => {
-    if (e) {
-        console.error('Error starting server:', e);
-        return;
-    }
-    console.log('Server running on port', process.env.PORT);
-    try {
-        await dbConnection();
-        console.log('Database connected successfully');
-    } catch (error) {
-        console.error('Error connecting to database:', error.message);
-    }
-});
+    server.listen(process.env.PORT, () => {
+      console.log('🚀 Server running on port', process.env.PORT);
+    });
+  } catch (error) {
+    console.error('❌ Error connecting to database:', error.message);
+    process.exit(1); // Exit if DB fails
+  }
+};
+
+startServer();
