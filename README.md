@@ -5,7 +5,7 @@ backend env file
 
 CLOUDAPI=
 CLOUDAPIKEYSECRATE=
-CLOUDNAME=dav5uxpq9
+CLOUDNAME=
 DB=
 FRONTEND=// frontend url
 NODE_ENV=
